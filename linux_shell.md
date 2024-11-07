@@ -5,21 +5,13 @@
   - `openssl rand -base64 6 | tr -d '\n' && echo "@TCE"`
 - 字符串替换 中文逗号换成英文逗号
   - `sed -i "s/，/,/g"`
-- for 循环参考
-  - 数组访问
-    ``` shell
-    for item in ${array[@]}
-    do
-        (do something...)
-    done
-    ```
-  - 文件逐行读取
-    ``` shell
-    while read line
-    do
-        ($line do something...)
-    done < $input_file
-    ```
+- 文件逐行读取
+``` shell
+while read line
+do
+    ($line do something...)
+done < $input_file
+```
 - 字符串分割用 , 分割成数组
   - `array=(${str//,/ })`
 - 字符串是否包含字串 is
@@ -31,3 +23,10 @@
   - `if[ "$str1" != "$str2" ]`
 - 获取数组size
   - `size = ${#array[@]}`
+- 数组访问
+``` shell
+for item in ${array[@]}
+do
+    (do something...)
+done
+```
