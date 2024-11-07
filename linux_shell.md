@@ -7,7 +7,9 @@
   - `sed -i "s/，/,/g"`
 - for 循环参考
   - 数组访问
-    - ``` for item in ${array[@]}
-          do
-            (dosomething...)
-          done ```
+    - ``` shell
+      for item in ${array[@]}
+      do
+        (dosomething...)
+      done
+      ```
