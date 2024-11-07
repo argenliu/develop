@@ -10,6 +10,24 @@
     - ``` shell
       for item in ${array[@]}
       do
-        (dosomething...)
+        (do something...)
       done
       ```
+  - 文件逐行读取
+    ``` shell
+    while read line
+    do
+      ($line do something...)
+    done < $input_file
+    ```
+- 字符串分割用 , 分割成数组
+  - `array=(${str//,/ })`
+- 字符串是否包含字串 is
+  - `if [[ "$str" =~ "is" ]]`
+- 字符串空判断
+  - `if [ -z "$str" ]`
+- 字符串相等判断
+  - `if[ "$str1" == "$str2" ]`
+  - `if[ "$str1" != "$str2" ]`
+- 获取数组size
+  - `size = ${#array[@]}`
